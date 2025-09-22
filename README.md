@@ -21,9 +21,6 @@
 </p>
 <p align="center"><!-- default option, no dependency badges. -->
 </p>
-<p align="center">
-  <!-- default option, no dependency badges. -->
-</p>
 <br>
 
 <details><summary>Table of Contents</summary>
@@ -39,14 +36,13 @@
 - [📌 Project Roadmap](#-project-roadmap)
 - [🔰 Contributing](#-contributing)
 - [🙌 Acknowledgments](#-acknowledgments)
-- [🎗 License](#-license)
+- [📃 License](#-license)
 
 </details>
 
----
+## 📍 Overview
 
 ## 👾 Features
-
 
 - Sources, headers and mains separated in distinct folders
 - Use of modern [CMake](https://cmake.org/) for much easier compiling
@@ -54,7 +50,9 @@
 
 ---
 
-## Dependencies
+## 🚀 Getting Started
+
+## ☑️ Prerequisites
 
 ### Libraries
 
@@ -96,6 +94,7 @@
 </div>
 
 ### Build Tools
+
 - [CMake](https://cmake.org/)
 
    <details closed>
@@ -114,12 +113,19 @@
    <summary>Scripts Build Configuration/Compilation</summary>
    </details>
 
-### Others 
-* [Conan](https://conan.io/) for install packages
-* [Git](https://git-scm.com/) for cmake automatic dependencies
-* [Doxygen](https://doxygen.org/) for generate documentation (optional)
+### Others
 
----
+- [Conan](https://conan.io/) for install packages
+- [Git](https://git-scm.com/) for cmake automatic dependencies
+- [Doxygen](https://doxygen.org/) for generate documentation (optional)
+
+## ⚙️ Installation
+
+## 🤖 Usage
+
+## 🧪 Testing
+
+## 📌 Project Roadmap
 
 ## 🔰 Contributing
 
@@ -168,7 +174,7 @@
 
 ### References
 
-- [GLFW](https://github.com/djoezeke/GLFWTem/) Template : with [OpenGl]() and [ImGui](https://github.com/ocornut/imgui) 
+- [GLFW](https://github.com/djoezeke/GLFWTem/) Template : with [OpenGl]() and [ImGui](https://github.com/ocornut/imgui)
 - [SDL](https://github.com/djoezeke/SDLTem/) Template : with [SDL](https://github.com/libsdl-org/sdl) and [ImGui](https://github.com/ocornut/imgui)
 
 - Inspirational templates : [CppProject](https://github.com/tweether/cpp-project), [ModernCppStarter](https://github.com/TheLartians/ModernCppStarter)
@@ -184,9 +190,9 @@ Here are some useful resources to learn more:
 
 ---
 
-## 🎗 License
+## 📃 License
 
-This project is protected under the [MIT](LICENSE) License. 
+This project is protected under the [MIT](LICENSE) License.
 For more details, refer to the [LICENSE](LICENSE) file.
 
 ---
