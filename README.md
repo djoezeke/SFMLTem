@@ -19,9 +19,6 @@
   <img src="https://img.shields.io/github/languages/top/djoezeke/SFMLTem?style=default&color=0080ff" alt="repo-top-language">
   <img src="https://img.shields.io/github/languages/count/djoezeke/SFMLTem?style=default&color=0080ff" alt="repo-language-count">
 </p>
-<p align="center"><!-- default option, no dependency badges. -->
-</p>
-<br>
 
 <details><summary>Table of Contents</summary>
 
@@ -33,7 +30,6 @@
   - [⚙️ Installation](#-installation)
   - [🤖 Usage](#🤖-usage)
   - [🧪 Testing](#🧪-testing)
-- [📌 Project Roadmap](#-project-roadmap)
 - [🔰 Contributing](#-contributing)
 - [🙌 Acknowledgments](#-acknowledgments)
 - [📃 License](#-license)
@@ -41,6 +37,20 @@
 </details>
 
 ## 📍 Overview
+
+This repository template should allow for a fast and hassle-free kick start of your next SFML project using CMake.
+Thanks to [GitHub's nature of templates](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template), you can fork this repository without inheriting its Git history.
+
+The template starts out very basic, but might receive additional features over time:
+
+- Basic CMake script to build your project and link SFML on any operating system
+- Basic [GitHub Actions](https://github.com/features/actions) script for all major platforms
+
+### For whom is this for?
+
+- Prototyping
+- Getting started with game programming
+- Getting started with graphics programming
 
 ## 👾 Features
 
@@ -52,11 +62,15 @@
 
 ## 🚀 Getting Started
 
+1. Install [Git](https://git-scm.com/downloads) and [CMake](https://cmake.org/download/). Use your system's package manager if available.
+
 ## ☑️ Prerequisites
 
-### Libraries
+This project leverages several modern libraries and tools to streamline development, building, and documentation.
 
-<div align="center">
+### 📚 Libraries
+
+<div>
    <table> 
       <thead> 
          <tr> <th>Library</th> <th>Purpose</th> <th>Details</th></tr> 
@@ -68,64 +82,73 @@
          <tr> 
             <td><a href="https://github.com/SFML/SFML">SFML</a></td> <td>Graphic/Rendering Library</td> <td>Used for Graphic Rendering</td> 
          </tr> 
+         <tr> 
+            <td><a href="https://github.com/SFML/ImGui-SFML">ImGui-SFML</a></td> <td>ImGui SFML Binding Library</td> <td>Bind ImGui and SFML</td> 
+         </tr> 
       </tbody> 
    </table> 
 </div>
 
-### Compilers
+### 🧑‍💻 Compilers
 
-<div align="center">
+<div>
    <table> 
       <thead> 
-         <tr> <th>Compiler</th> <th>Platforms</th> <th>Version</th></tr> 
+         <tr> <th>Compiler</th> <th>Platforms</th> <th>Minimum Version</th></tr> 
       </thead> 
       <tbody> 
          <tr> 
-            <td><a href="">Clang C/C++ Compiler</a></td> <td>Linux/Windows/MacOs</td> <td>0</td> 
+            <td><a href="https://clang.llvm.org/">Clang</a></td> <td>Linux/Windows/MacOs</td> <td>10</td> 
          </tr> 
          <tr> 
-            <td><a href="">Microsoft compiler (MSVC)</a></td> <td>Windows Only</td> <td>0</td> 
+            <td><a href="https://visualstudio.microsoft.com/vs/features/cplusplus/">MSVC</a></td> <td>Windows Only</td> <td>2019</td> 
          </tr> 
          <tr> 
-            <td><a href="">GNU/MinGW Compiler</a></td> <td>Linux/Windows/MacOs</td><td>0</td> 
+            <td><a href="https://gcc.gnu.org/">GNU/MinGW</a></td> <td>Linux/Windows/MacOs</td><td>9</td> 
          </tr> 
       </tbody> 
    </table> 
 </div>
 
-### Build Tools
+### 🛠️ Build Tools
 
-- [CMake](https://cmake.org/)
+<details closed>
+   <summary> <a href="https://cmake.org/">Cmake</a></summary>
+</details>
 
-   <details closed>
-   <summary>Cmake Build Configuration/Compilation</summary>
-   </details>
+<details closed>
+   <summary> <a href="https://www.gnu.org/software/make/">Make</a></summary>
+</details>
 
-- [Makefile]()
+<details closed>
+   <summary> <a href="">Script</a></summary>
+</details>
 
-   <details closed>
-   <summary>Makefile Build Configuration/Compilation</summary>
-   </details>
+### 🧰 Additional Tools
 
-- [Scripts]()
-
-   <details closed>
-   <summary>Scripts Build Configuration/Compilation</summary>
-   </details>
-
-### Others
-
-- [Conan](https://conan.io/) for install packages
+- [Conan](https://conan.io/) for install packages (optional)
 - [Git](https://git-scm.com/) for cmake automatic dependencies
 - [Doxygen](https://doxygen.org/) for generate documentation (optional)
 
 ## ⚙️ Installation
 
+### Using [CMake](https://cmake.org/)
+
+<details closed>
+<summary>Configuring and Building</summary>
+
+</details>
+
+### Using [Make](https://www.gnu.org/software/make/)
+
+<details closed>
+<summary>Configuring and Building</summary>
+
+</details>
+
 ## 🤖 Usage
 
 ## 🧪 Testing
-
-## 📌 Project Roadmap
 
 ## 🔰 Contributing
 
@@ -168,31 +191,23 @@
 </p>
 </details>
 
----
-
 ## 🙌 Acknowledgments
 
 ### References
 
-- [GLFW](https://github.com/djoezeke/GLFWTem/) Template : with [OpenGl]() and [ImGui](https://github.com/ocornut/imgui)
-- [SDL](https://github.com/djoezeke/SDLTem/) Template : with [SDL](https://github.com/libsdl-org/sdl) and [ImGui](https://github.com/ocornut/imgui)
-
-- Inspirational templates : [CppProject](https://github.com/tweether/cpp-project), [ModernCppStarter](https://github.com/TheLartians/ModernCppStarter)
+- [GLFWTem](https://github.com/djoezeke/GLFWTem/) : A GLFW STarter Template with [OpenGl]() and [ImGui](https://github.com/ocornut/imgui).
+- [SDLTem](https://github.com/djoezeke/SDLTem/) : A SDL Starter Template with [SDL](https://github.com/libsdl-org/sdl) and [ImGui](https://github.com/ocornut/imgui).
+- [CppStarter](https://github.com/djoezeke/CppStarter/) : A C/C++ Starter Template.
 
 ### More Reading
 
 Here are some useful resources to learn more:
 
-- [Official CMake Tutorial]()
-
+- [Official CMake Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
 - [Include ImGui with Conan](https://blog.conan.io/2019/06/26/An-introduction-to-the-Dear-ImGui-library.html)
 - [ Include ImGui with Vulkan](https://frguthmann.github.io/posts/vulkan_imgui/)
-
----
 
 ## 📃 License
 
 This project is protected under the [MIT](LICENSE) License.
 For more details, refer to the [LICENSE](LICENSE) file.
-
----
