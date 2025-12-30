@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16...4.1.1 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.16..4.1.1 FATAL_ERROR)
 
 #--------------------------------------------------------------------
 # Project and version.
@@ -120,6 +120,8 @@ endif()
 # Build targets
 #--------------------------------------------------------------------
 
+include_directories("." "../" "vendor/imgui" "vendor/imgui-sfml" "vendor/sfml/include")
+
 # Add executable
 add_executable("${TEMPLATE_EXE_TARGET_NAME}" "src/main.cpp")
 
@@ -137,7 +139,8 @@ endif()
 # 	sfml-graphics ImGui-SFML::ImGui-SFML
 # )
 
-target_link_libraries("${TEMPLATE_EXE_TARGET_NAME}" PRIVATE SFML::Graphics)
+target_link_libraries("${TEMPLATE_EXE_TARGET_NAME}" PRIVATE SFML::Graphics SFML::Window SFML::System ImGui-SFML::ImGui-SFML)
+target_compile_options("${TEMPLATE_EXE_TARGET_NAME}" PRIVATE ${IMGUI_SFML_WARNINGS})
 
 # set_property(TARGET "${TEMPLATE_EXE_TARGET_NAME}" PROPERTY CXX_STANDARD 17)
 # # target_include_directories(${TEMPLATE_EXE_TARGET_NAME} 

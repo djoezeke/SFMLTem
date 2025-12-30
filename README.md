@@ -58,8 +58,6 @@ The template starts out very basic, but might receive additional features over t
 - Use of modern [CMake](https://cmake.org/) for much easier compiling
 - Continuous integration via [GitHub Actions](https://help.github.com/en/actions)
 
----
-
 ## 🚀 Getting Started
 
 1. Install [Git](https://git-scm.com/downloads) and [CMake](https://cmake.org/download/). Use your system's package manager if available.
@@ -113,11 +111,11 @@ This project leverages several modern libraries and tools to streamline developm
 ### 🛠️ Build Tools
 
 <details closed>
-   <summary> <a href="https://cmake.org/">Cmake</a></summary>
+   <summary> <a href="https://cmake.org/">Cmake - Cross-platform build configuration </a></summary>
 </details>
 
 <details closed>
-   <summary> <a href="https://www.gnu.org/software/make/">Make</a></summary>
+   <summary> <a href="https://www.gnu.org/software/make/">Make - Linux/macOS build Automation</a></summary>
 </details>
 
 <details closed>
@@ -126,9 +124,10 @@ This project leverages several modern libraries and tools to streamline developm
 
 ### 🧰 Additional Tools
 
+- [Git](https://git-scm.com/) – Version control and submodule/dependency management
+- [Doxygen](https://doxygen.org/) – (Optional) Generate code documentation
+- [Ninja](https://ninja-build.org/) – (Optional) Faster alternative build backend for CMake
 - [Conan](https://conan.io/) for install packages (optional)
-- [Git](https://git-scm.com/) for cmake automatic dependencies
-- [Doxygen](https://doxygen.org/) for generate documentation (optional)
 
 ## ⚙️ Installation
 
@@ -193,9 +192,11 @@ This project leverages several modern libraries and tools to streamline developm
 
 ## 🙌 Acknowledgments
 
+We would like to express our gratitude to the following projects and individuals whose work made this project possible.
+
 ### References
 
-- [GLFWTem](https://github.com/djoezeke/GLFWTem/) : A GLFW STarter Template with [OpenGl]() and [ImGui](https://github.com/ocornut/imgui).
+- [GLFWTem](https://github.com/djoezeke/GLFWTem/) : A GLFW Starter Template with [OpenGl](https://www.opengl.org/) and [ImGui](https://github.com/ocornut/imgui).
 - [SDLTem](https://github.com/djoezeke/SDLTem/) : A SDL Starter Template with [SDL](https://github.com/libsdl-org/sdl) and [ImGui](https://github.com/ocornut/imgui).
 - [CppStarter](https://github.com/djoezeke/CppStarter/) : A C/C++ Starter Template.
 
@@ -211,3 +212,22 @@ Here are some useful resources to learn more:
 
 This project is protected under the [MIT](LICENSE) License.
 For more details, refer to the [LICENSE](LICENSE) file.
+
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="
+      https://api.star-history.com/svg?repos=SFMLTem/djoezeke&type=Date&theme=dark
+    "
+  />
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="
+      https://api.star-history.com/svg?repos=SFMLTem/djoezeke&type=Date
+    "
+  />
+  <img
+    alt="Star History Chart"
+    src="https://api.star-history.com/svg?repos=SFMLTem/djoezeke&type=Date"
+  />
+</picture>
