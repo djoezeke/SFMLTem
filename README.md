@@ -6,7 +6,7 @@
 ███████ ██     ██       ██ ██████   ██    ██████  ██       ██ ██     ██████ ██  ██    ██    ██████
 
 ◎ A Base Project Setup for SFML/ImGui
-```
+``` 
 
 <p align="center"><h1 align="center">SFML TEMPLATE</h1></p>
 <p align="center">
