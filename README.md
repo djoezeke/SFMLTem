@@ -6,7 +6,7 @@
 ███████ ██     ██       ██ ██████   ██    ██████  ██       ██ ██     ██████ ██  ██    ██    ██████
 
 ◎ A Base Project Setup for SFML/ImGui
-``` 
+```
 
 <p align="center"><h1 align="center">SFML TEMPLATE</h1></p>
 <p align="center">
@@ -24,11 +24,10 @@
 
 - [📍 Overview](#-overview)
 - [👾 Features](#-features)
-- [📁 Project Structure](#-project-structure)
+- [📁 Structure](#-structure)
 - [🚀 Getting Started](#-getting-started)
   - [☑️ Prerequisites](#-prerequisites)
-  - [⚙️ Installation](#-installation)
-  - [🤖 Usage](#🤖-usage)
+  - [⚙️ Building](#-building)
   - [🧪 Testing](#🧪-testing)
 - [🔰 Contributing](#-contributing)
 - [🙌 Acknowledgments](#-acknowledgments)
@@ -58,6 +57,8 @@ The template starts out very basic, but might receive additional features over t
 - Use of modern [CMake](https://cmake.org/) for much easier compiling
 - Continuous integration via [GitHub Actions](https://help.github.com/en/actions)
 
+## 📁 Structure
+
 ## 🚀 Getting Started
 
 1. Install [Git](https://git-scm.com/downloads) and [CMake](https://cmake.org/download/). Use your system's package manager if available.
@@ -66,88 +67,19 @@ The template starts out very basic, but might receive additional features over t
 
 This project leverages several modern libraries and tools to streamline development, building, and documentation.
 
-### 📚 Libraries
-
-<div>
-   <table> 
-      <thead> 
-         <tr> <th>Library</th> <th>Purpose</th> <th>Details</th></tr> 
-      </thead> 
-      <tbody> 
-         <tr> 
-            <td><a href="https://github.com/ocornut/imgui">ImGui</a></td> <td>Graphical User Interface</td> <td>Immediate Mode Graphical User Interface</td> 
-         </tr> 
-         <tr> 
-            <td><a href="https://github.com/SFML/SFML">SFML</a></td> <td>Graphic/Rendering Library</td> <td>Used for Graphic Rendering</td> 
-         </tr> 
-         <tr> 
-            <td><a href="https://github.com/SFML/ImGui-SFML">ImGui-SFML</a></td> <td>ImGui SFML Binding Library</td> <td>Bind ImGui and SFML</td> 
-         </tr> 
-      </tbody> 
-   </table> 
-</div>
-
-### 🧑‍💻 Compilers
-
-<div>
-   <table> 
-      <thead> 
-         <tr> <th>Compiler</th> <th>Platforms</th> <th>Minimum Version</th></tr> 
-      </thead> 
-      <tbody> 
-         <tr> 
-            <td><a href="https://clang.llvm.org/">Clang</a></td> <td>Linux/Windows/MacOs</td> <td>10</td> 
-         </tr> 
-         <tr> 
-            <td><a href="https://visualstudio.microsoft.com/vs/features/cplusplus/">MSVC</a></td> <td>Windows Only</td> <td>2019</td> 
-         </tr> 
-         <tr> 
-            <td><a href="https://gcc.gnu.org/">GNU/MinGW</a></td> <td>Linux/Windows/MacOs</td><td>9</td> 
-         </tr> 
-      </tbody> 
-   </table> 
-</div>
-
-### 🛠️ Build Tools
-
-<details closed>
-   <summary> <a href="https://cmake.org/">Cmake - Cross-platform build configuration </a></summary>
-</details>
-
-<details closed>
-   <summary> <a href="https://www.gnu.org/software/make/">Make - Linux/macOS build Automation</a></summary>
-</details>
-
-<details closed>
-   <summary> <a href="">Script</a></summary>
-</details>
-
 ### 🧰 Additional Tools
 
 - [Git](https://git-scm.com/) – Version control and submodule/dependency management
-- [Doxygen](https://doxygen.org/) – (Optional) Generate code documentation
 - [Ninja](https://ninja-build.org/) – (Optional) Faster alternative build backend for CMake
-- [Conan](https://conan.io/) for install packages (optional)
+- [Doxygen](https://doxygen.org/) – (Optional) Generate code documentation
 
-## ⚙️ Installation
+## ⚙️ Building
 
-### Using [CMake](https://cmake.org/)
-
-<details closed>
-<summary>Configuring and Building</summary>
-
-</details>
-
-### Using [Make](https://www.gnu.org/software/make/)
-
-<details closed>
-<summary>Configuring and Building</summary>
-
-</details>
-
-## 🤖 Usage
+### Build Program With [CMake](https://cmake.org/)
 
 ## 🧪 Testing
+
+### Unit Testing With [Doctest](https://github.com/onqtam/doctest)
 
 ## 🔰 Contributing
 
@@ -194,19 +126,32 @@ This project leverages several modern libraries and tools to streamline developm
 
 We would like to express our gratitude to the following projects and individuals whose work made this project possible.
 
+- [**SFML**](https://github.com/SFML/SFML) for Graphic Rendering
+- [**Clang**](https://clang.llvm.org) for compilation with sanitizers
+- [**ImGui**](https://github.com/ocornut/imgui) for Immediate Mode GUI
+- [**CMake**](https://cmake.org) for build automation
+- [**MkDocs**](https://www.mkdocs.org) for the documentation site
+- [**Doctest**](https://github.com/onqtam/doctest) for the unit tests
+- [**ImGui-SFML**](https://github.com/onqtam/doctest) to bind ImGui and SFML
+
+> [!IMPORTANT]
+> Special Thanks to the open-source community for their invaluable libraries, tutorials, and support.
+
+If you feel your work should be acknowledged here, please open an issue or pull request.
+
 ### References
 
-- [GLFWTem](https://github.com/djoezeke/GLFWTem/) : A GLFW Starter Template with [OpenGl](https://www.opengl.org/) and [ImGui](https://github.com/ocornut/imgui).
-- [SDLTem](https://github.com/djoezeke/SDLTem/) : A SDL Starter Template with [SDL](https://github.com/libsdl-org/sdl) and [ImGui](https://github.com/ocornut/imgui).
-- [CppStarter](https://github.com/djoezeke/CppStarter/) : A C/C++ Starter Template.
+- [**CPPTem**](https://github.com/djoezeke/CppTem/) : A C/C++ Starter Template.
+- [**SDLTem**](https://github.com/djoezeke/SDLTem/) : A SDL Starter Template with [SDL](https://www.libsdl.org/) and [ImGui](https://github.com/ocornut/imgui).
+- [**RAYTem**](https://github.com/djoezeke/SDLTem/) : A Raylib Starter Template with [Raylib](https://www.raylib.com) and [ImGui](https://github.com/ocornut/imgui).
+- [**SFMLTem**](https://github.com/djoezeke/SFMLTem/) : A SFML Starter Template with [SFML](https://www.sfml-dev.org/) and [ImGui](https://github.com/ocornut/imgui).
+- [**GLFWTem**](https://github.com/djoezeke/GLFWTem/) : A GLFW Starter Template with [OpenGl](https://www.opengl.org/) and [ImGui](https://github.com/ocornut/imgui).
 
 ### More Reading
 
 Here are some useful resources to learn more:
 
 - [Official CMake Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
-- [Include ImGui with Conan](https://blog.conan.io/2019/06/26/An-introduction-to-the-Dear-ImGui-library.html)
-- [ Include ImGui with Vulkan](https://frguthmann.github.io/posts/vulkan_imgui/)
 
 ## 📃 License
 
