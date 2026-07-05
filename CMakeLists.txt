@@ -99,8 +99,6 @@ endif()
 # Add Subdirectories
 #--------------------------------------------------------------------
 
-# Add the subdirectories for the libraries
-add_subdirectory(vendor)
 
 # Build the test apps   
 if(TEMPLATE_BUILD_TESTS)
@@ -120,7 +118,7 @@ endif()
 # Build targets
 #--------------------------------------------------------------------
 
-include_directories("." "../" "vendor/imgui" "vendor/imgui-sfml" "vendor/sfml/include")
+include_directories(".")
 
 # Add executable
 add_executable("${TEMPLATE_EXE_TARGET_NAME}" "src/main.cpp")
@@ -129,32 +127,37 @@ if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET "${TEMPLATE_EXE_TARGET_NAME}" PROPERTY CXX_STANDARD 20)
 endif()
 
-# target_link_libraries (
-# 	"${TEMPLATE_EXE_TARGET_NAME}"
-# 	sfml-system sfml-window sfml-graphics sfml-network sfml-audio
-# 	ImGui-SFML::ImGui-SFML
-# )
-# target_link_libraries (
-# 	"${TEMPLATE_EXE_TARGET_NAME}"
-# 	sfml-graphics ImGui-SFML::ImGui-SFML
-# )
+include(FetchContent)
 
-target_link_libraries("${TEMPLATE_EXE_TARGET_NAME}" PRIVATE SFML::Graphics SFML::Window SFML::System ImGui-SFML::ImGui-SFML)
-target_compile_options("${TEMPLATE_EXE_TARGET_NAME}" PRIVATE ${IMGUI_SFML_WARNINGS})
+# Configure SFML options before fetching (turn off examples/tests to keep fetch lightweight)
+set(SFML_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+set(SFML_BUILD_TEST_SUITE OFF CACHE BOOL "" FORCE)
+set(SFML_BUILD_DOC OFF CACHE BOOL "" FORCE)
 
-# set_property(TARGET "${TEMPLATE_EXE_TARGET_NAME}" PROPERTY CXX_STANDARD 17)
-# # target_include_directories(${TEMPLATE_EXE_TARGET_NAME} 
-# #     PUBLIC 
-# #         $<BUILD_INTERFACE:"${CMAKE_CURRENT_SOURCE_DIR}/${TEMPLATE_INCLUDE_DIR}">
-# # )
+FetchContent_Declare(
+  SFML
+  GIT_REPOSITORY https://github.com/SFML/SFML.git
+  GIT_TAG 2.6.0
+)
+FetchContent_MakeAvailable(SFML)
 
-# # MY_SOURCES is defined to be a list of all the source files for my game
-# file(GLOB_RECURSE TEMPLATE_SOURCE_FILES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
+# Link against the modern SFML CMake targets provided by the SFML project
+if (DEFINED SFML_SOURCE_DIR)
+  target_include_directories("${TEMPLATE_EXE_TARGET_NAME}" PRIVATE "${SFML_SOURCE_DIR}/include")
+endif()
 
+if (TARGET SFML::Graphics AND TARGET SFML::Window AND TARGET SFML::System)
+  target_link_libraries("${TEMPLATE_EXE_TARGET_NAME}" PRIVATE SFML::Graphics SFML::Window SFML::System)
+elseif (TARGET sfml-graphics AND TARGET sfml-window AND TARGET sfml-system)
+  target_link_libraries("${TEMPLATE_EXE_TARGET_NAME}" PRIVATE sfml-graphics sfml-window sfml-system)
+else()
+  message(FATAL_ERROR "SFML CMake targets not found after FetchContent_MakeAvailable(SFML).")
+endif()
 
-# target_sources("${TEMPLATE_EXE_TARGET_NAME}" PRIVATE ${TEMPLATE_SOURCE_FILES})
-# target_compile_definitions("${TEMPLATE_EXE_TARGET_NAME}" PUBLIC GLFW_INCLUDE_NONE=1)
-# # target_include_directories("${TEMPLATE_EXE_TARGET_NAME}" PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include/")
-# target_link_libraries("${TEMPLATE_EXE_TARGET_NAME}" imgui-sfml  imgui sfml)
-
-# Add Library
+# Preserve optional ImGui-SFML linkage if available
+if (TARGET ImGui-SFML::ImGui-SFML)
+  target_link_libraries("${TEMPLATE_EXE_TARGET_NAME}" PRIVATE ImGui-SFML::ImGui-SFML)
+  if (DEFINED IMGUI_SFML_WARNINGS)
+    target_compile_options("${TEMPLATE_EXE_TARGET_NAME}" PRIVATE ${IMGUI_SFML_WARNINGS})
+  endif()
+endif()
